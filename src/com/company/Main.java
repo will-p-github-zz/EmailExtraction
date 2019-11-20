@@ -17,7 +17,7 @@ public class Main {
         Path filepath = Paths.get("sample.txt");
         String content = Files.readString(filepath);
 
-        Pattern pattern = Pattern.compile("\\s([\\w.'_%+-]+@)([\\w-]+)(.[\\w.-]+)\\s");
+        Pattern pattern = Pattern.compile("\\s([\\w.'_%+-]+@)([\\w-]+)(\\.[\\w-]+)*\\s");
         Matcher matcher = pattern.matcher(content);
 
         HashMap<String, Integer> domains = new HashMap<String, Integer>();
