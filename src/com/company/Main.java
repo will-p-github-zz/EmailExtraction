@@ -17,13 +17,15 @@ public class Main {
         Path filepath = Paths.get("sample.txt");
         String content = Files.readString(filepath);
 
-        Pattern pattern = Pattern.compile("\\b([\\w.'_%+-]+@)([\\w-]+)(.[\\w.-]+)\\b");
+        Pattern pattern = Pattern.compile("\\s([\\w.'_%+-]+@)([\\w-]+)(.[\\w.-]+)\\s");
         Matcher matcher = pattern.matcher(content);
 
         HashMap<String, Integer> domains = new HashMap<String, Integer>();
+        int currPos = 0;
 
-        while (matcher.find()) {
+        while (matcher.find(currPos)) {
 
+            currPos = matcher.end() - 1;
             String domain = matcher.group(2);
             int count = domains.containsKey(domain) ? domains.get(domain) : 0;
             domains.put(domain, count+1 );
@@ -39,6 +41,5 @@ public class Main {
                 System.out.println(entry.getKey() + " " + entry.getValue());
             }
         });
-
     }
 }
