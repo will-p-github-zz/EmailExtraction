@@ -4,9 +4,11 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.HashMap;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static java.util.Map.Entry.comparingByValue;
 
 public class Main {
 
@@ -15,7 +17,7 @@ public class Main {
         Path filepath = Paths.get("sample.txt");
         String content = Files.readString(filepath);
 
-        Pattern pattern = Pattern.compile("\\b([\\w.'_%+-]+@)([\\w.-]+)\\b");
+        Pattern pattern = Pattern.compile("\\b([\\w.'_%+-]+@)([\\w-]+)(.[\\w.-]+)\\b");
         Matcher matcher = pattern.matcher(content);
 
         HashMap<String, Integer> domains = new HashMap<String, Integer>();
@@ -28,8 +30,14 @@ public class Main {
 
         }
 
-        domains.entrySet().forEach(entry->{
-            System.out.println(entry.getKey() + " " + entry.getValue());
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("domain frequency cutoff?");
+        int cutoff = scanner.nextInt();
+
+        domains.entrySet().stream().sorted(Map.Entry.<String, Integer>comparingByValue().reversed()).limit(10).forEach(entry->{
+            if (entry.getValue() > cutoff) {
+                System.out.println(entry.getKey() + " " + entry.getValue());
+            }
         });
 
     }
