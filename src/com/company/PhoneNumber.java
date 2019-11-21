@@ -13,7 +13,8 @@ public class PhoneNumber {
         Path filepath = Paths.get("numbers.txt");
         String content = Files.readString(filepath);
 
-        Pattern pattern = Pattern.compile("(\\+[1-9])?\\d{5}[\\t -]?\\d{6}");
+        //Pattern pattern = Pattern.compile("(\\+[1-9])?\\d{5}[\\t -]?\\d{6}");
+        Pattern pattern = Pattern.compile("(\\d[ -.]?){10,11}");
         Matcher matcher = pattern.matcher(content);
 
         while (matcher.find()) {

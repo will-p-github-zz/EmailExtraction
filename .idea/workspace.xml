@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e2281897-3777-43f0-9f9f-b538936792ae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EmailExtraction/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EmailExtraction/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/PhoneNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/PhoneNumber.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +41,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.RegexParse">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="EmailExtraction" />
@@ -53,8 +52,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PhoneNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.PhoneNumber" />
+      <module name="EmailExtraction" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegexParse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.RegexParse" />
+      <module name="EmailExtraction" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.PhoneNumber" />
+      <item itemvalue="Application.RegexParse" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RegexParse" />
+        <item itemvalue="Application.PhoneNumber" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -69,7 +101,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574245273872</updated>
-      <workItem from="1574245279581" duration="10042000" />
+      <workItem from="1574245279581" duration="15540000" />
     </task>
     <servers />
   </component>
